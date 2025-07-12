@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Master Chess</title>
+  <style>
+    body {
+      margin: 20;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
+    header {
+      width: 100%;
+      padding: 20px;
+      background-color: #111;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      border-bottom: 2px solid gold;
+    }
+    .nav-buttons {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .nav-buttons button {
+      padding: 15px 30px;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background: gold;
+      color: #111;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .nav-buttons button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px gold;
+    }
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 16px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>🏠 Welcome to Master Chess</header>
+
+  <div class="nav-buttons">
+    <button onclick="location.href='dashboard.html'">Go to game</button>
+    <div class="footer">Designed by Mahimasatti</div>
+</body>
+</html>

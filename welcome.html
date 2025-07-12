@@ -1,0 +1,57 @@
+<!-- welcome.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Master Chess</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    .loader {
+      text-align: center;
+      animation: fadeIn 2s;
+    }
+    .loader h1 {
+      font-size: 40px;
+      color: gold;
+      animation: glow 2s infinite;
+    }
+    .loader .chess {
+      font-size: 50px;
+      margin-top: 10px;
+      animation: spin 2s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 10px gold; }
+      50% { text-shadow: 0 0 20px white; }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader">
+    <h1>Welcome to Master Chess</h1>
+    <div class="chess">♛</div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "home.html";
+    }, 4000); // 4 seconds
+  </script>
+  <div class="footer">Designed by Mahimasatti</div>
+</body>
+</html>

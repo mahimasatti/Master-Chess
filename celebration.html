@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Game Over - Celebration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at center, #3a0ca3, #0f0c29);
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: #7fffd4;
+      text-shadow: 2px 2px #000;
+      margin-bottom: 10px;
+    }
+
+    .winner {
+      font-size: 32px;
+      color: #00f9ff;
+      background: #fff1;
+      padding: 12px 24px;
+      border-radius: 20px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 18px;
+      background: #00ffab;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      color: #111;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #00c9a7;
+    }
+
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      animation: fall 3s infinite linear;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-100vh) rotate(0); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🏁 Game Over!</h1>
+  <div class="winner" id="winnerText">White Wins 🏆</div>
+  <button class="btn" onclick="location.href='index.html'">Back to Dashboard</button>
+
+  <script>
+    // 🎊 Confetti generator
+    for (let i = 0; i < 100; i++) {
+      let confetti = document.createElement('div');
+      confetti.classList.add('confetti');
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.backgroundColor = ['#7fffd4', '#00f9ff', '#00ffab', '#39ff14'][Math.floor(Math.random() * 4)];
+      confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+      document.body.appendChild(confetti);
+    }
+
+    // ✅ Optional: Change winner text using query param
+    const params = new URLSearchParams(window.location.search);
+    const winner = params.get("winner");
+    if (winner) {
+      document.getElementById("winnerText").textContent = winner + " Wins 🏆";
+    }
+  </script>
+  <div class="footer">Designed by Mahimasatti</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Master Chess - Dashboard</title>
+  <style>
+    body {
+      background-color: #111;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: gold;
+      margin-bottom: 40px;
+    }
+
+    .dashboard {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .dash-btn {
+      padding: 15px 40px;
+      font-size: 20px;
+      background: linear-gradient(to right, gold, orange);
+      border: none;
+      border-radius: 12px;
+      color: #111;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .dash-btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, orange, gold);
+    }
+    .footer {
+        position: absolute;
+        bottom: 20px;
+        font-size: 16px;
+        color: #ccc;
+      }
+  </style>
+</head>
+<body>
+  <h1>Master Chess Dashboard</h1>
+  <div class="dashboard">
+    <button class="dash-btn" onclick="location.href='offline.html'">👥 Offline Game</button>
+    
+    <button class="dash-btn" onclick="location.href='robot.html'">🤖 Play with Robot</button>
+  </div>
+  <div class="footer">Designed by Mahimasatti</div>
+</body>
+</html>
